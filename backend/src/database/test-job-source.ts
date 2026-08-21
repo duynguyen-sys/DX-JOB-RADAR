@@ -30,6 +30,11 @@ ensureSource(
   "https://source-a.example.com"
 );
 
+ensureSource(
+  "REMOTIVE",
+  "https://remotive.com/api/remote-jobs"
+);
+
 console.log("\n📋 ALL SOURCES");
 
 console.table(
