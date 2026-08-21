@@ -49,6 +49,8 @@ console.table(
 
     company: job.company,
 
+    role: job.role,
+
     remote: job.remote,
 
     skills:
@@ -63,7 +65,6 @@ console.table(
       job.publishedAt
   }))
 );
-
 
 // =====================================================
 // RAW / SPECIFIC SKILL ANALYSIS

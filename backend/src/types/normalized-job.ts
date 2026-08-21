@@ -1,3 +1,5 @@
+import type { JobRole } from "../services/job-role-detector.js";
+
 export interface NormalizedJob {
   source: string;
   externalId: string;
@@ -20,6 +22,8 @@ export interface NormalizedJob {
   publishedAt: string | null;
 
   skills: string[];
+
+  role: JobRole;
 
   normalizedText: string;
 }

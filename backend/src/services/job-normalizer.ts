@@ -1,6 +1,6 @@
 import type { RawJob } from "../types/job.js";
 import type { NormalizedJob } from "../types/normalized-job.js";
-
+import { detectJobRole } from "./job-role-detector.js";
 import { extractSkills } from "./skill-extractor.js";
 import { filterSpecificSkills } from "./filter-specific-skills.js";
 
@@ -57,10 +57,11 @@ export function normalizeJob(
     filterSpecificSkills(
       detectedSkills
     );
-
+const role =
+  detectJobRole(title);
   return {
     source: cleanText(job.source),
-
+    
     externalId:
       cleanText(job.externalId),
 
@@ -101,7 +102,7 @@ export function normalizeJob(
       job.publishedAt ?? null,
 
     skills,
-
+    role,
     normalizedText
   };
 }
