@@ -20,4 +20,6 @@ export interface NormalizedJob {
   publishedAt: string | null;
 
   skills: string[];
+
+  normalizedText: string;
 }
